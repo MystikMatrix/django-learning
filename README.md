@@ -9,3 +9,20 @@ I am participating in the 2025 Target/ Women in Cybersecurity Challenge
 
 <img width="370" height="387" alt="image" src="https://github.com/user-attachments/assets/71a0b90b-4ef9-429c-a83c-82faddbb180b" />
 
+# Django Access Lab
+
+## Features
+- Basic Django routing
+- HTTP parameter testing
+- CTF vulnerability simulations
+
+## Setup
+1. Clone the repo 
+2. Create a virtualenv
+3. Install Django  ---  python -m pip install Django
+4. Run the server
+
+## Future Work
+- Add authentication
+- Simulate session hijacking
+- Add test API routes
