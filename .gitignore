@@ -1,0 +1,17 @@
+# Bytecode
+*.pyc
+__pycache__/
+
+# Virtual env
+venv/
+
+# SQLite
+*.sqlite3
+*.db
+
+# VS Code
+.vscode/
+
+# OS cruft
+.DS_Store
+Thumbs.db
