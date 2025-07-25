@@ -19,9 +19,30 @@ I am participating in the 2025 Target/ Women in Cybersecurity Challenge
 ## Setup
 1. Clone the repo 
 2. Create a virtualenv
-3. Install Django  ---  python -m pip install Django
-4. Run the server
 
+I used Python’s built-in venv module to isolate the dependencies for this project.
+Using a virtual environment ensures that:
+
+🧼 Clean Environment
+Each project maintains its own dependencies and versions (e.g., Django), avoiding global package conflicts.
+
+🧪 Reproducibility
+The environment can be recreated using requirements.txt, making it easier to collaborate and deploy.
+
+🔒 Safety
+Installing packages globally can break other Python projects. venv keeps things isolated.
+
+Tooling Compatibility
+Tools like django-admin and linters use the venv-scoped environment, ensuring predictable behavior.
+"Activated env" 
+.\venv\Scripts\Activate.ps1
+
+3. Install Django  ---  python -m pip install Django
+4. Start the Django project:
+
+    django-admin startproject mysite .
+5. Run the server
+    python manage.py runserver
 ## Future Work
 - Add authentication
 - Simulate session hijacking
