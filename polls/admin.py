@@ -4,4 +4,4 @@ from .models import Question
 from .models import Choice
 
 admin.site.register(Question)
-admin.site.register(Choice)  # Ensure Choice model is registered as well
+admin.site.register(Choice) 
