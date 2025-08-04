@@ -17,6 +17,7 @@ I am participating in the 2025 Target/ Women in Cybersecurity Challenge
 - HTTP parameter testing
 - CTF vulnerability simulations
 
+
 ## Setup
 1. Clone the repo 
 2. Create a virtualenv
@@ -48,3 +49,6 @@ Tools like django-admin and linters use the venv-scoped environment, ensuring pr
 - Add authentication
 - Simulate session hijacking
 - Add test API routes
+- Integrate the Dwitter project to expand functionality and provide practical examples of Django use cases.
+
+Note: The inclusion of the Dwitter project will demonstrate additional Django functionalities and offer practical scenarios for handling user-generated content, enhancing the educational and practical utility of this repository.
