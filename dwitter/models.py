@@ -1,7 +1,7 @@
 from django.db import models
-
+from django.db.models.signals import post_save #import the post_save signal
 # Create your models here.
-# dwitter/models.py
+##dwitter/models.py
 
 from django.db import models
 #import the built-in User model that you want to extend.
@@ -25,3 +25,18 @@ class Profile(models.Model):
         #  blank=True allows the field to be empty, meaning a profile can exist without following any other profiles.
         blank=True
     )
+    def __str__(self):
+        return self.user.username
+    
+    # new function called create_profile that uses created, which post_save provides, to decide whether to create a new Profile instance.
+    #  code will only continue if the post-save signal indicates that Django created the user object successfully.
+    #  If so, it creates a new Profile instance linked to the user and saves it to the database.
+    def create_profile(sender, instance, created, **kwargs):
+        if created:
+            user_profile = Profile(user=instance)
+            user_profile.save()
+            user_profile.follows.set([instance.profile.id])
+            user_profile.save()
+
+# Create a Profile for each new user.
+    post_save.connect(create_profile, sender=User)
